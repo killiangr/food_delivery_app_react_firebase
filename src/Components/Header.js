@@ -14,7 +14,7 @@ function Header() {
     <div className='shoppingCart'>
       <ShoppingCartRounded className='cart' />
       <div className='cart_content'>
-        <p>2</p>
+        <p>0</p>
       </div>
     </div>
 
@@ -29,7 +29,7 @@ function Header() {
     <div className='toggleMenu'>
       <BarChart className='toggleIcon' />
     </div>
-    
+
   </header>
   );
 }
