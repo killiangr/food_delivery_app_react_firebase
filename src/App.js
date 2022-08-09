@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect, useState } from "react";
 import Header from './Components/Header';
 import MenuContainer from "./Components/MenuContainer";
 import {
@@ -11,6 +12,18 @@ import {
 } from "@mui/icons-material";
 
 function App() {
+
+  useEffect(() => {
+    const menuLi = document.querySelectorAll("#menu li");
+
+    function setMenuActive() {
+      menuLi.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    menuLi.forEach(n => n.addEventListener('click', setMenuActive))
+  }, []);
+
   return (
     <div className="App">
       <Header />
